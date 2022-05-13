@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThreadedDownloadActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:text="Enter URL"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <EditText
+        android:id="@+id/editTextURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <Button
+        android:id="@+id/buttonRR"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2B2B2B"
+        android:textColor="@color/white"
+        android:onClick="runRunnable"
+        android:text="Run Runnable"
+        android:textSize="25px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextURL" />
+
+    <Button
+        android:id="@+id/buttonRM"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2B2B2B"
+        android:textColor="@color/white"
+        android:onClick="runMessages"
+        android:text="Run Messages"
+        android:textSize="25px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toEndOf="@+id/buttonRR"
+        app:layout_constraintTop_toBottomOf="@+id/editTextURL" />
+
+    <Button
+        android:id="@+id/buttonRA"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2B2B2B"
+        android:onClick="runAsyncTask"
+        android:textColor="@color/white"
+        android:text="Run Async"
+        android:textSize="25px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toEndOf="@+id/buttonRM"
+        app:layout_constraintTop_toBottomOf="@+id/editTextURL" />
+
+    <Button
+        android:id="@+id/buttonRES"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2B2B2B"
+        android:textColor="@color/white"
+        android:onClick="resetImage"
+        android:text="Reset Image"
+        android:textSize="25px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toEndOf="@+id/buttonRA"
+        app:layout_constraintTop_toBottomOf="@+id/editTextURL" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/apple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
